@@ -7,7 +7,7 @@ class Config:
     TG_BOT_TOKEN = "your_bot_token"
     DOWNLOAD_BASE_DIR = "/app/downloads"
     WORK_DIR = "./"
-    ADMIN_ID = 123456789  # Your Telegram ID
+    ADMIN_ID = 1281749717  # Your Telegram ID
     DATABASE_URL = "postgres://user:password@host:port/dbname"
     AUTH_CHAT = []
     AUTH_USERS = ""
