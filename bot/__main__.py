@@ -6,7 +6,7 @@ from pyrogram.handlers import MessageHandler, CallbackQueryHandler
 from pyrogram.types import Message
 from pyrogram.errors import MessageNotModified
 
-from bot import Config, LOGGER, CMD
+from bot import Config, LOGGER, CMD  # LOGGER က bot.logger ကနေ လာတာပါ
 from bot.helpers.translations import lang
 from bot.helpers.utils.clean import clean_up
 from bot.helpers.utils.check_link import check_link
@@ -50,10 +50,10 @@ async def loadConfigs():
     if not "" in {Config.DEEZER_EMAIL, Config.DEEZER_PASSWORD}:
         if Config.DEEZER_BF_SECRET == "":
             LOGGER.warning("Deezer BF Secret not provided.")
-            exit(1)
+            sys.exit(1)
         if Config.DEEZER_TRACK_URL_KEY == "":
             LOGGER.warning("Deezer Track URL Key not provided.")
-            exit(1)
+            sys.exit(1)
         await deezerdl.login()
     elif Config.DEEZER_ARL != "":
         await deezerdl.login(True)
