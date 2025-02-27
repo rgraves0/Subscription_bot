@@ -5,6 +5,7 @@ mutagen
 psutil
 aigpy
 python-dotenv
+jsonpickle
 lyricsgenius
 pydub
 pycryptodomex
@@ -18,5 +19,7 @@ python-telegram-bot==20.8
 python-dotenv
 pyrogram
 tidal-dl
-psycopg2-binary
+requests
+pycryptodomex
+music-tag
 git+https://github.com/kokarare1212/librespot-python
