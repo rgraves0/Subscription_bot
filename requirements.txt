@@ -18,5 +18,5 @@ python-telegram-bot==20.8
 python-dotenv
 pyrogram
 tidal-dl
-qobuz-dl
+psycopg2-binary
 git+https://github.com/kokarare1212/librespot-python
