@@ -17,4 +17,6 @@ librespot
 python-telegram-bot==20.8
 python-dotenv
 pyrogram
+tidal-dl
+qobuz-dl
 git+https://github.com/kokarare1212/librespot-python
