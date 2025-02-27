@@ -2,24 +2,31 @@
 import os
 
 class Config:
-    
-    APP_ID = int(os.getenv("APP_ID", "0"))  # Telegram App ID from my.telegram.org
-    API_HASH = os.getenv("API_HASH", "")     # Telegram API Hash from my.telegram.org
-    BOT_TOKEN = os.getenv("BOT_TOKEN", "")
-    BOT_USERNAME = os.getenv("BOT_USERNAME", "@YourBotUsername")  # Replace with your bot's username
+    APP_ID = "your_api_id"
+    API_HASH = "your_api_hash"
+    TG_BOT_TOKEN = "your_bot_token"
+    DOWNLOAD_BASE_DIR = "/app/downloads"
     WORK_DIR = "./"
-    ADMIN_ID = 1281749717  # Replace with your Telegram user ID
-    DOWNLOAD_BASE_DIR = "./downloads"
-    QOBUZ_EMAIL = os.getenv("QOBUZ_EMAIL", "")
-    QOBUZ_PASSWORD = os.getenv("QOBUZ_PASSWORD", "")
-    DEEZER_EMAIL = os.getenv("DEEZER_EMAIL", "")
-    DEEZER_PASSWORD = os.getenv("DEEZER_PASSWORD", "")
-    DEEZER_BF_SECRET = os.getenv("DEEZER_BF_SECRET", "")
-    DEEZER_TRACK_URL_KEY = os.getenv("DEEZER_TRACK_URL_KEY", "")
-    DEEZER_ARL = os.getenv("DEEZER_ARL", "")
-    KKBOX_EMAIL = os.getenv("KKBOX_EMAIL", "")
-    KKBOX_KEY = os.getenv("KKBOX_KEY", "")
-    KKBOX_PASSWORD = os.getenv("KKBOX_PASSWORD", "")
-    SPOTIFY_EMAIL = os.getenv("SPOTIFY_EMAIL", "")
-    SPOTIFY_PASS = os.getenv("SPOTIFY_PASS", "")
-    ANIT_SPAM_MODE = os.getenv("ANIT_SPAM_MODE", "False")
+    ADMIN_ID = 123456789  # Your Telegram ID
+    DATABASE_URL = "postgres://user:password@host:port/dbname"
+    AUTH_CHAT = []
+    AUTH_USERS = ""
+    ADMINS = []
+    IS_BOT_PUBLIC = "False"
+    ANIT_SPAM_MODE = "True"
+    MENTION_USERS = "True"
+    TIDAL_TRACK_FORMAT = "{TrackNumber} - {ArtistName} - {TrackTitle}{ExplicitFlag}"
+    QOBUZ_TRACK_FORMAT = "{TrackNumber} - {ArtistName} - {TrackTitle}"
+    KKBOX_EMAIL = ""
+    KKBOX_KEY = ""
+    KKBOX_PASSWORD = ""
+    QOBUZ_EMAIL = ""
+    QOBUZ_PASSWORD = ""
+    DEEZER_EMAIL = ""
+    DEEZER_PASSWORD = ""
+    DEEZER_ARL = ""
+    DEEZER_BF_SECRET = ""
+    DEEZER_TRACK_URL_KEY = ""
+    SPOTIFY_EMAIL = ""
+    SPOTIFY_PASS = ""
+    BOT_LANGUAGE = "en"
