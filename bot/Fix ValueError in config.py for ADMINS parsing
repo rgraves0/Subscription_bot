@@ -17,7 +17,7 @@ class Config:
     DATABASE_URL = os.getenv("DATABASE_URL", "postgres://user:password@host:port/dbname")
     AUTH_CHAT = os.getenv("AUTH_CHAT", "").split(",") if os.getenv("AUTH_CHAT") else []
     AUTH_USERS = os.getenv("AUTH_USERS", "").split(",") if os.getenv("AUTH_USERS") else ""
-    ADMINS = [int(x) for x in os.getenv("ADMINS", "").split(",") if x] if os.getenv("ADMINS") else []
+    ADMINS = []
     IS_BOT_PUBLIC = os.getenv("IS_BOT_PUBLIC", "False")
     ANIT_SPAM_MODE = os.getenv("ANIT_SPAM_MODE", "True")
     MENTION_USERS = os.getenv("MENTION_USERS", "True")
@@ -38,8 +38,18 @@ class Config:
     BOT_LANGUAGE = os.getenv("BOT_LANGUAGE", "en")
 
     def __init__(self):
+        # Handle ADMINS parsing safely
+        admins_str = os.getenv("ADMINS", "")
+        if admins_str:
+            try:
+                # Split and convert to integers, ignoring invalid entries
+                self.ADMINS = [int(x.strip()) for x in admins_str.split(",") if x.strip().isdigit()]
+            except ValueError as e:
+                LOGGER.warning(f"Invalid ADMINS value in env: {admins_str}, error: {e}")
+                self.ADMINS = []
+
         # Check for admin IDs and log appropriately
-        if self.ADMIN_ID == 0 and not any(self.ADMINS):  # Only warn if ADMIN_ID is 0 and ADMINS is empty
+        if self.ADMIN_ID == 0 and not self.ADMINS:
             LOGGER.warning("NO ADMIN USER IDS FOUND")
         else:
             if self.ADMIN_ID != 0:
