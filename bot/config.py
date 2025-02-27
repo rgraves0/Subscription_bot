@@ -4,7 +4,8 @@ import os
 class Config:
     APP_ID = int(os.getenv("APP_ID", "0"))  # Telegram App ID from my.telegram.org
     API_HASH = os.getenv("API_HASH", "")     # Telegram API Hash from my.telegram.org
-    TG_BOT_TOKEN = os.getenv("TG_BOT_TOKEN", "")
+    BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+    BOT_USERNAME = os.getenv("BOT_USERNAME", "@YourBotUsername")  # Replace with your bot's username
     WORK_DIR = "./"
     DOWNLOAD_BASE_DIR = "./downloads"
     QOBUZ_EMAIL = os.getenv("QOBUZ_EMAIL", "")
