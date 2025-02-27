@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+*.py eol=lf
+Dockerfile eol=lf
+requirements.txt eol=lf
