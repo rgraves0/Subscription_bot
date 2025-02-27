@@ -1,7 +1,9 @@
 # bot/config.py
+import os
+
 class Config:
-    APP_ID = int(os.getenv("APP_ID", "0"))  # Replace with your Telegram App ID
-    API_HASH = os.getenv("API_HASH", "")     # Replace with your Telegram API Hash
+    APP_ID = int(os.getenv("APP_ID", "0"))  # Telegram App ID from my.telegram.org
+    API_HASH = os.getenv("API_HASH", "")     # Telegram API Hash from my.telegram.org
     TG_BOT_TOKEN = os.getenv("TG_BOT_TOKEN", "")
     WORK_DIR = "./"
     DOWNLOAD_BASE_DIR = "./downloads"
